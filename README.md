@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/hotdocx/researchersx.hotdocx.com/gh-pages/hotdocx_mascot.png" width="150" alt="hotdocX Mascot">
   <h1 align="center">hotdocX</h1>
   <p align="center">
-    <strong>Publish Your Daily Experiences Apps, Get Paid. <br/> <em>hotdocX is the Hottest Fastest Calendared-Marketplace Publisher</em></strong>
+    <strong>Publish Your Daily Experiences Apps, Get Paid. <br/> <em>hotdocX is the Hottest Fastest Calendared-Marketplace Publisher.</em></strong>
   </p>
   <p align="center">
     hotdocX is an AI-powered social events marketplace that turns your Images, PDFs, LaTeX, Markdown text, and data into live, shareable applications.
