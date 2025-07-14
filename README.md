@@ -2,10 +2,10 @@
   <img src="https://raw.githubusercontent.com/hotdocx/researchersx.hotdocx.com/gh-pages/hotdocx_mascot.png" width="150" alt="hotdocX Mascot">
   <h1 align="center">hotdocX</h1>
   <p align="center">
-    <strong>Transform Your Research. <br/> <em>From Static Paper to Interactive Experiment.</em></strong>
+    <strong>Publish Your Daily Experiences Apps, Get Paid. <br/> <em>hotdocX is the Hottest Fastest Calendared-Marketplace Publisher</em></strong>
   </p>
   <p align="center">
-    hotdocX is an AI-powered social events marketplace that turns your PDFs, LaTeX, and data into live, shareable applications.
+    hotdocX is an AI-powered social events marketplace that turns your Images, PDFs, LaTeX, Markdown text, and data into live, shareable applications.
   </p>
   <p align="center">
     <a href="https://hotdocx.kit.com" target="_blank">
@@ -88,6 +88,49 @@ Sponsorship tiers map directly to our in-app subscription plans, giving you an a
 -   **UI**: [Shadcn UI](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)
 -   **In-Browser IDE**: `@codesandbox/sandpack-react`
 -   **AI**: Google Gemini & Mistral
+
+## hotdocX Feature List
+
+### **Access & User Experience**
+
+*   **Anonymous Guest Access:** Users can browse and interact with the application without signing in, with an option to create an account later.
+*   **User Authentication:** Supports email/OTP (One-Time Password) and GitHub OAuth for user sign-up and sign-in.
+*   **Geolocation Services:** Utilizes the user's current location to filter event listings and provide localized search results for events and places.
+*   **Map Provider Selection:** Allows users to switch between Google Maps and MapLibre for displaying event and place locations on maps.
+*   **Theme Toggle:** Provides a user-toggleable dark and light theme for the application interface.
+
+### **Event & Content Creation**
+
+*   **AI-Powered Document Transformation:** Converts user-uploaded documents (PDFs, LaTeX, text, images) into interactive UIs, visualizations, or runnable code artifacts using Google Gemini AI models. Generated code is rendered in an in-browser Sandpack environment.
+*   **Event Creation:** Users can create events specifying a title, associated place, selected AI template, and an initial AI prompt.
+*   **Online Meeting Integration:** Offers the option to create Microsoft Teams meetings for events, which are configured to allow all attendees to join and present directly. Requires a configured SharePoint relay for the associated place.
+*   **Event Remixing:** Enables users to create new events based on existing ones, inheriting documents and AI prompt history. Remixing may be subject to a "remix\_access" entitlement purchase.
+*   **Document Attachment & Sourcing:** Supports native file uploads and integration with external document sources including SharePoint, GitHub repositories, arXiv categories, and URLs. Includes OCR processing for PDF documents.
+*   **Thumbnail Generation:** Automatically generates PDF thumbnails, can use AI-generated images, or generates an AI summary thumbnail if no other visual thumbnail is available.
+*   **In-Editor Content Editing:** Event creators with appropriate permissions (creator, manager, or purchased "view\_source" access) can directly edit generated code artifacts within the Sandpack editor.
+*   **AI Conversation Continuation:** Allows event creators to provide additional prompts to the AI model to refine existing artifacts, maintaining a conversation history.
+
+### **Platform Interaction & Discovery**
+
+*   **Event Browsing Views:** Events can be displayed in grid, swipeable deck, map, or calendar formats.
+*   **Event Filtering:** Events can be filtered by proximity to user's location, tags, and date ranges (start/end times).
+*   **Place Management:** Users can create and manage "Places" which act as community hubs. Places can be linked to Google Places or Baidu Maps IDs.
+*   **Place Search:** Provides search functionality for places by name, supporting both Google Places and Baidu Places APIs for location linking.
+*   **Event Calendar Views:** Dedicated calendar views are available for all public events on the home page, and a personalized calendar view within the user's profile showing their created, saved, and attending events.
+*   **User Profiles:** Displays user information, created events, created and owned places, and events marked as saved, upcoming attending, or past attending.
+*   **Commenting System:** Supports adding comments to events, replying to specific comments, and mentioning other users (`@mention`).
+*   **User Actions Tracking:** Records user interactions with events, such as saving, attending, or hiding events.
+*   **In-App Notifications:** Notifies users about new comments, event attendance, remixes, and direct mentions.
+
+### **Monetization & API**
+
+*   **Creator Economy:** Event creators can define a `purchaseMenu` for their events, specifying items (e.g., `remix_access`, `view_source`) and their prices in a virtual currency ("Coins"). Items can be entitlements (one-time purchase) or consumables (repeatable purchases).
+*   **Virtual Coin System:** An in-app virtual currency ("Coins") is used for purchases. Users can acquire Coins via Stripe. User Coin balances are managed atomically.
+*   **Subscription Tiers:** Supports "Free," "Premium," and "VIP" subscription tiers. Users can upgrade their tier via Stripe or by sponsoring the hotdocX project on GitHub.
+*   **Social Media Relays:** Automates the cross-posting of new events to configured social media platforms (X/Twitter, Reddit, Instagram) and SharePoint sites.
+*   **Permanent Event Identifiers (CAT-Refs):** Each event receives a unique, immutable 14-character identifier (e.g., `YYDDD-UUUU-QQSSS`). Events can be retrieved using the full ID or an 11-character shorthand.
+*   **Programmatic Event Creation API:** Provides an HTTP API endpoint for external applications to programmatically create events, upload associated files (including base64 encoded content), and integrate with AI content generation. API access is secured using personal access tokens with defined scopes.
+    *   **API Token Management:** Users can generate and manage personal access tokens with specific scopes (e.g., `events:create`) from their settings page. Rate limiting is applied to API usage.
 
 ---
 <p align="center">
